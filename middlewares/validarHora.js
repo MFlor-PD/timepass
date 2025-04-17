@@ -7,7 +7,8 @@ const validarHora = (req, res, next) => {
     if (horaActual >= horaLimite1 && horaActual <= horaLimite2) {
         next();
     } else {
-        res.status(400).send('Aún no son las 12:00 de la maniana, espera para entrar'); 
+        res.locals.mensaje = 'Aún no son las 12:00 de la maniana, espera para entrar'; 
+        return res.redirect('/?mensaje=' + encodeURIComponent(res.locals.mensaje));
     }
 }
 module.exports = validarHora;

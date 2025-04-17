@@ -1,16 +1,20 @@
 const express = require('express');
 const app = express();
 
-const INDEX = require('./routes/index');
-const ENDROUTE = require('./routes/endpoint');
+const indexRouter = require('./routes/index');
+const endrouteRouter = require('./routes/endpoint');
 
 const horaMiddleware = require('./middleware/horaMiddleware'); 
 const validarHora = require('./middleware/validarHora');
 
-app.use('/', INDEX);
-app.use('/endroute', ENDROUTE);
+app.use(horaMiddleware); 
+app.use('/', indexRouter);
+app.use('/endroute', validarHora, endrouteRouter);
 
 
 app.listen(3000, () => {
     console.log('Server is running on port 3000');
 });
+
+
+
