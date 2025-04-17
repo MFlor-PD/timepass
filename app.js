@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 const indexRouter = require('./routes/index');
-const endrouteRouter = require('./routes/endpoint');
+const endrouteRouter = require('./routes/endroute');
 
 const horaMiddleware = require('./middleware/horaMiddleware'); 
 const validarHora = require('./middleware/validarHora');
