@@ -1,0 +1,1 @@
+//`validarHora.js`: Aquí estará la lógica de si accedemos a la siguiente ruta
