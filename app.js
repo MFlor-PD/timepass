@@ -7,8 +7,8 @@ const ENDROUTE = require('./routes/endpoint');
 const horaMiddleware = ('./middleware/horaMiddleware'); 
 const validarHora = require('./middleware/validarHora');
 
-app.use('/', indexRouter);
-app.use('/endroute', endrouteRouter);
+app.use('/', INDEX);
+app.use('/endroute', ENDROUTE);
 
 
 app.listen(3000, () => {
