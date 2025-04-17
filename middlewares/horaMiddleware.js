@@ -1,1 +1,9 @@
-//`horaMiddleware.js`: De aquí sacaremos la hora. Recuerda que hay que pasarla como una req y con js podemos obtener la fecha con new Date()
+const horaMiddleware = (req, res, next) => {
+  const fecha = new Date();
+  const hora = fecha.getHours();
+  const minutos = fecha.getMinutes();
+  const segundos = fecha.getSeconds();
+  req.hora = `${hora}:${minutos}:${segundos}`;
+  next();
+}
+module.exports = horaMiddleware;
