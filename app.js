@@ -4,8 +4,8 @@ const app = express();
 const indexRouter = require('./routes/index');
 const endrouteRouter = require('./routes/endroute');
 
-const horaMiddleware = require('./middleware/horaMiddleware'); 
-const validarHora = require('./middleware/validarHora');
+const horaMiddleware = require('./middlewares/horaMiddleware'); 
+const validarHora = require('./middlewares/validarHora');
 
 app.use(horaMiddleware); 
 app.use('/', indexRouter);
