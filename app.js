@@ -4,7 +4,7 @@ const app = express();
 const INDEX = require('./routes/index');
 const ENDROUTE = require('./routes/endpoint');
 
-const horaMiddleware = ('./middleware/horaMiddleware'); 
+const horaMiddleware = require('./middleware/horaMiddleware'); 
 const validarHora = require('./middleware/validarHora');
 
 app.use('/', INDEX);
